@@ -1,7 +1,6 @@
 package org.icadev.loans.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Positive;
@@ -38,18 +37,18 @@ public class LoansDto {
     @Schema(
             description = "Total loan amount", example = "100000"
     )
-    private int totalLoan;
+    private Long totalLoan;
 
     @PositiveOrZero(message = "Total loan amount paid should be equal or greater than zero")
     @Schema(
             description = "Total loan amount paid", example = "1000"
     )
-    private int amountPaid;
+    private Long amountPaid;
 
     @PositiveOrZero(message = "Total outstanding amount should be equal or greater than zero")
     @Schema(
             description = "Total outstanding amount against a loan", example = "99000"
     )
-    private int outstandingAmount;
+    private Long outstandingAmount;
 
 }
