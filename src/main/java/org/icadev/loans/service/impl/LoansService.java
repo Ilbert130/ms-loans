@@ -4,8 +4,8 @@ import lombok.RequiredArgsConstructor;
 import org.icadev.loans.constants.LoansConstants;
 import org.icadev.loans.dto.LoansDto;
 import org.icadev.loans.entity.Loans;
-import org.icadev.loans.entity.exception.LoanAlreadyExistsException;
-import org.icadev.loans.entity.exception.ResourceNotFoundException;
+import org.icadev.loans.exception.LoanAlreadyExistsException;
+import org.icadev.loans.exception.ResourceNotFoundException;
 import org.icadev.loans.mapper.LoansMapper;
 import org.icadev.loans.repository.LoansRepository;
 import org.icadev.loans.service.ILoansService;
@@ -43,7 +43,7 @@ public class LoansService implements ILoansService {
         newLoan.setMobileNumber(mobileNumber);
         newLoan.setLoanType(LoansConstants.HOME_LOAN);
         newLoan.setTotalLoan(LoansConstants.NEW_LOAN_LIMIT);
-        newLoan.setAmountPaid(0);
+        newLoan.setAmountPaid(0L);
         newLoan.setOutstandingAmount(LoansConstants.NEW_LOAN_LIMIT);
         return newLoan;
     }

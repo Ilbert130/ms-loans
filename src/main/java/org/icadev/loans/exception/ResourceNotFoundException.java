@@ -1,4 +1,4 @@
-package org.icadev.loans.entity.exception;
+package org.icadev.loans.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
