@@ -13,7 +13,7 @@ import lombok.*;
 public class Loans extends BaseEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "loan_id")
     private Long loanId;
 
@@ -32,6 +32,6 @@ public class Loans extends BaseEntity {
     @Column(name = "amount_paid")
     private Long amountPaid;
 
-    @Column(name = "outstanding_amoun")
+    @Column(name = "outstanding_amount")
     private Long outstandingAmount;
 }
